@@ -16,9 +16,10 @@ namespace Coursework1
         {
             reader = new Reader(directory);
         }
-        public void Run()
+        public async Task<Dictionary<string, uint>> Run()
         {
-            reader.ToTree(dictionary);
+            await Task.Run(() => reader.ToTree(dictionary));
+            return await Task.Run(() => dictionary.Export());
         }
         public void Clean()
         {

@@ -10,7 +10,7 @@ namespace Coursework1
         private const string StorageFile = "FileInfo.txt";
         private readonly StreamReader _stream;
         public int StorageFilesCount;
-        public int StorageFilesProcessedCount = -1;
+        public int StorageFilesProcessedCount = 0;
 
         public ReaderDirectores(string directory)
         {

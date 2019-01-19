@@ -9,9 +9,9 @@ namespace Coursework1
         private const int WaitTime = 1;
         private readonly ReaderDirectores directores;
         private StreamReader stream;
-        public Reader(string directory) { directores = new ReaderDirectores(directory); }
         public int StorageFilesCount => directores.StorageFilesCount;
         public int StorageFilesProcessedCount => directores.StorageFilesProcessedCount;
+        public Reader(string directory) { directores = new ReaderDirectores(directory); }
         private void NextSourceFileOpenStream()
         {
             var nextfile = directores.GetNextSourceFile();

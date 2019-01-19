@@ -25,10 +25,12 @@ namespace Coursework1
         }
         Node Root = new Node('\0');
         public uint DifferentWords { get; private set; } = 0;
+        public uint All { get; private set; } = 0;
         public SuffixTree()
         { }
         public void AddWord(string word)
         {
+            All++;
             Node Current = Root;
             var NotInitialized = false;
             for (int i = word.Length - 1; i >= 0; i--)
