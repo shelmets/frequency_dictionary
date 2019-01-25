@@ -63,6 +63,7 @@ namespace Coursework1
         }
         private async void GoButton_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
             if (!Directory.Exists(PathTextBox.Text)) { MessageBox.Show("File not exists"); return; }
             manager = new Manager(PathTextBox.Text);
             OverviewButton.Enabled = false;
@@ -124,6 +125,22 @@ namespace Coursework1
             else
             {
                 series.Points.Clear();
+            }
+            var zipf = chart1.Series.FindByName("Zipf");
+            if (zipf == null)
+            {
+                zipf = chart1.Series.Add("Zipf");
+                zipf.Color = Color.Red;
+                zipf.ChartType = SeriesChartType.Line;
+                zipf.ChartArea = "ChartArea1";
+            }
+            else
+            {
+                zipf.Points.Clear();
+            }
+            for(int i = 1 ; i <= int.Parse(FirstWordsTextBox.Text);i++)
+            {
+                zipf.Points.AddY(chartdictionary[0].Value/i);
             }
             foreach (var pair in chartdictionary.Take(int.Parse(FirstWordsTextBox.Text)))
             {

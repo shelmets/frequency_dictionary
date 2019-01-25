@@ -45,12 +45,12 @@
             this.CountWordsTextLabel = new System.Windows.Forms.Label();
             this.CountWordsLabel = new System.Windows.Forms.Label();
             this.BarChartGroupBox = new System.Windows.Forms.GroupBox();
+            this.FirstWordsTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.BuildButton = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.FirstWordsTextBox = new System.Windows.Forms.TextBox();
             this.InputFileGroupBox.SuspendLayout();
             this.ProgressGroupBox.SuspendLayout();
             this.ResultsGroupBox.SuspendLayout();
@@ -199,20 +199,38 @@
             this.BarChartGroupBox.Controls.Add(this.BuildButton);
             this.BarChartGroupBox.Location = new System.Drawing.Point(437, 1);
             this.BarChartGroupBox.Name = "BarChartGroupBox";
-            this.BarChartGroupBox.Size = new System.Drawing.Size(735, 516);
+            this.BarChartGroupBox.Size = new System.Drawing.Size(845, 516);
             this.BarChartGroupBox.TabIndex = 3;
             this.BarChartGroupBox.TabStop = false;
             this.BarChartGroupBox.Text = "Bar Chart";
             // 
+            // FirstWordsTextBox
+            // 
+            this.FirstWordsTextBox.Location = new System.Drawing.Point(96, 37);
+            this.FirstWordsTextBox.Name = "FirstWordsTextBox";
+            this.FirstWordsTextBox.Size = new System.Drawing.Size(46, 22);
+            this.FirstWordsTextBox.TabIndex = 5;
+            this.FirstWordsTextBox.Text = "200";
+            this.FirstWordsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Take first ";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // chart1
             // 
-            chartArea1.AxisY.MaximumAutoSize = 10F;
             chartArea1.AxisY.ScaleView.SmallScrollMinSize = 100D;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(6, 71);
             this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(721, 424);
+            this.chart1.Size = new System.Drawing.Size(820, 424);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "Word frequency";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -220,7 +238,7 @@
             // BuildButton
             // 
             this.BuildButton.Enabled = false;
-            this.BuildButton.Location = new System.Drawing.Point(602, 37);
+            this.BuildButton.Location = new System.Drawing.Point(701, 37);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(125, 28);
             this.BuildButton.TabIndex = 0;
@@ -242,30 +260,11 @@
             this.listBox1.Size = new System.Drawing.Size(430, 132);
             this.listBox1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Take first ";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // FirstWordsTextBox
-            // 
-            this.FirstWordsTextBox.Location = new System.Drawing.Point(96, 37);
-            this.FirstWordsTextBox.Name = "FirstWordsTextBox";
-            this.FirstWordsTextBox.Size = new System.Drawing.Size(46, 22);
-            this.FirstWordsTextBox.TabIndex = 5;
-            this.FirstWordsTextBox.Text = "200";
-            this.FirstWordsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 520);
+            this.ClientSize = new System.Drawing.Size(1294, 520);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BarChartGroupBox);
             this.Controls.Add(this.ResultsGroupBox);
