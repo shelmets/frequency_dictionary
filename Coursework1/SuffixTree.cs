@@ -88,14 +88,14 @@ namespace Coursework1
                     buff = buff + s[i];
                     if (i == s.Length - 1)
                     {
-                        this.AddWord(buff);
+                        this.AddWord(buff.ToUpper());
                         break;
                     }
                     continue;
                 }
                 if (buff != "")
                 {
-                    this.AddWord(buff);
+                    this.AddWord(buff.ToUpper());
                 }
                 buff = "";
             }

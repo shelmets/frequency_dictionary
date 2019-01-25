@@ -6,7 +6,6 @@ namespace Coursework1
 {
     public class Reader: IDisposable
     {
-        private const int WaitTime = 1;
         private readonly ReaderDirectores directores;
         private StreamReader stream;
         public int StorageFilesCount => directores.StorageFilesCount;

@@ -11,7 +11,6 @@ namespace Coursework1
         public Writer writer;
         public SuffixTree dictionary = new SuffixTree();
         public Reader reader;
-        public Manager() { }
         public Manager(string directory)
         {
             reader = new Reader(directory);

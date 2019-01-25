@@ -111,14 +111,15 @@ namespace Coursework1
 
         private void BuildButton_Click(object sender, EventArgs e)
         {
-            AsyncAddToListBox();
-            KeyValuePair<string, uint>[] chartdictionary; 
+            listBox1.Items.Clear();
+            KeyValuePair<string, uint>[] chartdictionary;
             chartdictionary = main_dic.OrderByDescending(x => x.Value).ToArray();
-
+            AsyncAddToListBox();
             var series = chart1.Series.FindByName("Word");
             if (series == null)
             {
                 series = chart1.Series.Add("Word");
+                series.Color = Color.LightGray;
                 series.ChartType = SeriesChartType.Column;
                 series.ChartArea = "ChartArea1";
             }
